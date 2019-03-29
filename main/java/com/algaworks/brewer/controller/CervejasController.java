@@ -37,7 +37,7 @@ import com.algaworks.brewer.service.CadastroCervejaService;
 import com.algaworks.brewer.service.exception.GenericMessageException;
 import com.algaworks.brewer.service.exception.ImpossivelExcluirEntidadeException;
 
-// teste para o Git
+// 
 
 @Controller
 @RequestMapping("/cervejas")
