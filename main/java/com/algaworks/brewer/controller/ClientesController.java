@@ -36,6 +36,9 @@ import com.algaworks.brewer.service.CadastroClienteService;
 import com.algaworks.brewer.service.exception.GenericMessageException;
 import com.algaworks.brewer.service.exception.ImpossivelExcluirEntidadeException;
 
+
+// testes git
+
 @Controller
 @RequestMapping("/clientes")
 public class ClientesController {
