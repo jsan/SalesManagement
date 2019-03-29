@@ -37,7 +37,7 @@ import com.algaworks.brewer.service.exception.GenericMessageException;
 import com.algaworks.brewer.service.exception.ImpossivelExcluirEntidadeException;
 
 
-// testes git
+// tests Git Sales management 
 
 @Controller
 @RequestMapping("/clientes")
