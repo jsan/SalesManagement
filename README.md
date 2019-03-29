@@ -1,4 +1,4 @@
-# SalesManagement
+# Sales Management Applipcation
 
 Model App for product management
 
