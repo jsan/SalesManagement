@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import com.algaworks.brewer.dto.VendaDiaDTO;
 import com.algaworks.brewer.dto.VendaMes;
 import com.algaworks.brewer.model.Venda;
 import com.algaworks.brewer.repository.filters.VendaFilter;
@@ -21,4 +22,5 @@ public interface VendasQueries {
 	public BigDecimal valorTicketMedio();
 	
 	public List<VendaMes> totalPorMes();
+	public List<VendaDiaDTO> totalPorDia();
 }

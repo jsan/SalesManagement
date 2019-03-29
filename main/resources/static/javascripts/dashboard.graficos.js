@@ -8,7 +8,7 @@ Brewer.GraficoVendaPorMes = (function() {
 	
 	GraficoVendaPorMes.prototype.iniciar = function() {
 		$.ajax({
-			url: 'vendas/totalPorMes',
+			url: 'vendas/totalPorDia',
 			method: 'GET', 
 			success: onDadosRecebidos.bind(this)
 		});
@@ -18,7 +18,7 @@ Brewer.GraficoVendaPorMes = (function() {
 		var meses = [];
 		var valores = [];
 		vendaMes.forEach(function(obj) {
-			meses.unshift(obj.mes);
+			meses.unshift(obj.dia);
 			valores.unshift(obj.total);
 		});
 		
@@ -27,7 +27,7 @@ Brewer.GraficoVendaPorMes = (function() {
 		    data: {
 		    	labels: meses,
 		    	datasets: [{
-		    		label: 'Vendas por mês',
+		    		label: 'Vendas por mês/dia',
 		    		backgroundColor: "rgba(26,179,148,0.5)",
 	                pointBorderColor: "rgba(26,179,148,1)",
 	                pointBackgroundColor: "#fff",

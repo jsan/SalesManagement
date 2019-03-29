@@ -25,6 +25,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.algaworks.brewer.controller.page.PageWrapper;
 import com.algaworks.brewer.controller.validator.VendaValidator;
+import com.algaworks.brewer.dto.VendaDiaDTO;
 import com.algaworks.brewer.dto.VendaMes;
 import com.algaworks.brewer.mail.Mailer;
 import com.algaworks.brewer.model.Cerveja;
@@ -71,7 +72,7 @@ public class VendasController {
 	@GetMapping
 	public ModelAndView pesquisaVenda(VendaFilter vendaFilter, 
 			BindingResult result, 
-			@PageableDefault(size=3) Pageable pageable,
+			@PageableDefault(size=10) Pageable pageable,
 			HttpServletRequest req) {
 		ModelAndView mav = new ModelAndView("venda/PesquisaVendas");
 		mav.addObject("todosStatus", StatusVenda.values());
@@ -193,6 +194,11 @@ public class VendasController {
 	@GetMapping("/totalPorMes")
 	public @ResponseBody List<VendaMes> listarTotalDeVendasPorMes(){
 		return vendas.totalPorMes();
+	}
+
+	@GetMapping("/totalPorDia")
+	public @ResponseBody List<VendaDiaDTO> listarTotalDeVendasPorDia(){
+		return vendas.totalPorDia();
 	}
 	
 	private void setUuid(Venda venda) {

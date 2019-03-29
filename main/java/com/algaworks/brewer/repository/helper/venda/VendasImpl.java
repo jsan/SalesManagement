@@ -26,6 +26,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
+import com.algaworks.brewer.dto.VendaDiaDTO;
 import com.algaworks.brewer.dto.VendaMes;
 import com.algaworks.brewer.model.StatusVenda;
 import com.algaworks.brewer.model.TipoPessoa;
@@ -127,6 +128,32 @@ public class VendasImpl implements VendasQueries {
 		return listaVendaMes;
 	}	
 	
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<VendaDiaDTO> totalPorDia() {
+		// esta query vai ser buscada no xml na pasta resources/sql. esta pasta está definida no JPAconfig.java
+		
+		List<VendaDiaDTO> listaVendaDia = manager.createNamedQuery("Vendas.totalPorDia").getResultList();
+//		
+//		List<String> listaDias = new ArrayList<>();
+//		
+//		for(VendaDiaDTO lvm : listaVendaDia){
+//			listaDias.add(lvm.getDia());
+//		}
+//		
+//		LocalDate data = LocalDate.now();
+//		
+//		for (int i = 0; i < 6; i++) {
+//			String dataCompare = String.format("%d/%02d", data.minusMonths(i).getYear(), data.minusMonths(i).getMonthValue());
+//			if (!listaDias.contains(dataCompare)) {
+//				listaVendaDia.add(i, new VendaDiaDTO(dataCompare, 0));
+//			}
+//		}
+		
+		
+		return listaVendaDia;
+	}
 	private long totalRegs(VendaFilter filtro) {
 		Criteria criteria = manager.unwrap(Session.class).createCriteria(Venda.class);
 		adicionarFiltro(filtro, criteria);
