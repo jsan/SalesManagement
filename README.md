@@ -1,4 +1,5 @@
 # Sales Management Application
+Manage your clients, your products, your sales. 
 
 Some Technical specification:
 Java 1.8.201 / Spring MVC / Spring Security / Thymeleaf server pages /
