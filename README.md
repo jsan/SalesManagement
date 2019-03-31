@@ -1,15 +1,12 @@
 # Sales Management Application
-Manage your clients, your products, your sales. 
+Manage your products, your clients, your sellers and your sales. 
 
 
-Description:
-As an administrator user you can catalog new products to your store, catalog buyers clients into a database, and catalog sale users, which are those who are going to sell the products to the clients.
+As an administrator user you can catalog your products to your stock, catalog buyers clients into a database, and seller users.
 
-As an user you can set up a product order to a client defining what products will be in the order, what is the amount of each product, a discount and a delivery price. The status of an order can be changed from budget to issued or canceled.
+As a user you can fill up a product order, include a list of products to be in the order, give discounts, make notes and send it by e-mail. The status of an order can be changed from budget to issued or canceled.
 
-On the dashboard, are information about monthly sales, itens stoked and total of clients registred. Also the sales can be tracked by a sales tracking chart.
-
-Main product properties: Id number Name a custmizable property Type Origin price comission Amount to storage
+On the dash-board, information gets up to date accordingly with the sales. Graphic monthly chart of the  sales, items in stock and total of clients cataloged. 
 
 Some Technical specification:
 Java 1.8.201 / Spring MVC / Spring Security / Thymeleaf server pages /
