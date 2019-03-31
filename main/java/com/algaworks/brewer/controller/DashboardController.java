@@ -29,7 +29,7 @@ public class DashboardController {
 		mav.addObject("ticketMedio", vendas.valorTicketMedio());
 		mav.addObject("quantdadeNoEstoque", cervejas.quantidadeNoEstoque());
 		mav.addObject("valorNoEstoque", cervejas.valorNoEstoque());
-		mav.addObject("totalDeClientes", clientes.totalDeClientes());
+		mav.addObject("totalDeClientes", clientes.count());
 		return mav;
 	}
 

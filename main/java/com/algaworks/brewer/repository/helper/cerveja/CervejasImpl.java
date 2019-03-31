@@ -42,12 +42,7 @@ public class CervejasImpl implements CervejasQueries {
 		
 		return new PageImpl<>(criteria.list(), pageable, totalRegs(filtro));
 	}
-	
-//	@Override
-//	public Integer quantidadeNoEstoque() {
-//		Optional<Integer> optional = Optional.ofNullable(manager.createQuery("select sum(quantidadeEstoque) from Cerveja ", Long.class).getFirstResult());
-//		return optional.orElse(0); // ou seja se a consulta resultar em null, retornar 0
-//	}
+
 	
 	private long totalRegs(CervejaFilter filtro) {
 		Criteria criteria = manager.unwrap(Session.class).createCriteria(Cerveja.class);
@@ -88,6 +83,13 @@ public class CervejasImpl implements CervejasQueries {
 		}
 	}
 
+//	Se quiser fazer com objetoDTO e Jpql (valor e itens de estoque no dashboard)
+//	@Override
+//	public ValorItensEstoque valorItensEstoque() {
+//		String query = "select new com.algaworks.brewer.dto.ValorItensEstoque(sum(valor * quantidadeEstoque), sum(quantidadeEstoque)) from Cerveja";
+//		return manager.createQuery(query, ValorItensEstoque.class).getSingleResult();
+//	}
+	
 	private boolean isEstiloPresente(CervejaFilter filtro) {
 		return filtro.getEstilo() != null && filtro.getEstilo().getCodigo() != null;
 	}
