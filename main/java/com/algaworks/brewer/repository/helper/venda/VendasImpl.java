@@ -104,7 +104,7 @@ public class VendasImpl implements VendasQueries {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<VendaMes> totalPorMes() {
+	public List<VendaMes> totalPorMes() { // grafico dashboard
 		// esta query vai ser buscada no xml na pasta resources/sql. esta pasta está definida no JPAconfig.java
 		
 		List<VendaMes> listaVendaMes = manager.createNamedQuery("Vendas.totalPorMes").getResultList();
@@ -131,7 +131,7 @@ public class VendasImpl implements VendasQueries {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<VendaDiaDTO> totalPorDia() {
+	public List<VendaDiaDTO> totalPorDia() { // grafico dashboard
 		// esta query vai ser buscada no xml na pasta resources/sql. esta pasta está definida no JPAconfig.java
 		
 		List<VendaDiaDTO> listaVendaDia = manager.createNamedQuery("Vendas.totalPorDia").getResultList();

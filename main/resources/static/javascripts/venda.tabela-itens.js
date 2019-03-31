@@ -45,7 +45,7 @@ Brewer.TabelaItens = (function(){
 	}
 	
 	function onItemQuantidadeItemAlterado(evento){
-		var input = $(evento.target); // aqui se pega todas as propriedades da tag input que sofreu o onChange 
+		var input = $(evento.target); // pega todas as propriedades da tag input que sofreu o onChange 
 		var quantidade = input.val();
 
 		if (quantidade <= 0){

@@ -37,6 +37,7 @@ import com.algaworks.brewer.repository.Vendas;
 import com.algaworks.brewer.repository.filters.VendaFilter;
 import com.algaworks.brewer.security.UsuarioSistema;
 import com.algaworks.brewer.service.CadastroVendaService;
+import com.algaworks.brewer.service.exception.GenericMessageException;
 import com.algaworks.brewer.session.TabelaItensSession;
 
 @Controller
@@ -135,7 +136,7 @@ public class VendasController {
 		
 		cadastroVendaService.salvar(venda);
 		attributes.addFlashAttribute("menssagem", "Venda salva com sucesso!");
-		return new ModelAndView("redirect:/vendas/nova");
+		return new ModelAndView("redirect:/vendas/");
 	}
 
 	@PostMapping(value = "/nova", params = "emitir")
@@ -147,8 +148,13 @@ public class VendasController {
 		
 		venda.setUsuario(usuarioSistema.getUsuario());
 		
-		cadastroVendaService.emitir(venda);
-		attributes.addFlashAttribute("menssagem", "Venda emitida com sucesso!");
+		try {
+			cadastroVendaService.emitir(venda);
+			attributes.addFlashAttribute("menssagem", "Venda emitida com sucesso!");
+		}catch(GenericMessageException e ) {
+			result.rejectValue("valorFrete", e.getMessage(), e.getMessage());
+			return nova(venda);
+		}
 		return new ModelAndView("redirect:/vendas/nova");
 	}
 

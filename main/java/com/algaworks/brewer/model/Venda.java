@@ -79,11 +79,11 @@ public class Venda {
 	}
 	
 	public boolean isSalvarPermitido() {
-		return !status.equals(StatusVenda.CANCELADA);
+		return status.equals(StatusVenda.ORCAMENTO);
 	}
 	
 	public boolean isSalvarProibido() {
-		return !isSalvarPermitido();
+		return !status.equals(StatusVenda.ORCAMENTO);
 	}
 	
 	public Long getCodigo() {

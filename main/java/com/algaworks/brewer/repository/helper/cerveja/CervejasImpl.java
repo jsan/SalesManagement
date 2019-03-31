@@ -43,6 +43,12 @@ public class CervejasImpl implements CervejasQueries {
 		return new PageImpl<>(criteria.list(), pageable, totalRegs(filtro));
 	}
 	
+//	@Override
+//	public Integer quantidadeNoEstoque() {
+//		Optional<Integer> optional = Optional.ofNullable(manager.createQuery("select sum(quantidadeEstoque) from Cerveja ", Long.class).getFirstResult());
+//		return optional.orElse(0); // ou seja se a consulta resultar em null, retornar 0
+//	}
+	
 	private long totalRegs(CervejaFilter filtro) {
 		Criteria criteria = manager.unwrap(Session.class).createCriteria(Cerveja.class);
 		adicionarFiltro(filtro, criteria);
