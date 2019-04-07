@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -24,8 +25,10 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.util.StringUtils;
 
+import com.algaworks.brewer.repository.listener.CervejaListetner;
 import com.algaworks.brewer.validation.SKU;
 
+@EntityListeners(CervejaListetner.class) // pegar o nome da url no FotoStorage getUrl
 @Entity
 @Table(name = "cerveja")
 public class Cerveja {
@@ -83,6 +86,12 @@ public class Cerveja {
 	
 	@Transient
 	private boolean novaFoto;
+
+	@Transient
+	private String urlFoto;
+	
+	@Transient
+	private String urlThumbnailFoto;
 	
 	public boolean isNovaFoto() {
 		return novaFoto;
@@ -195,6 +204,24 @@ public class Cerveja {
 
 	public void setContentType(String contentType) {
 		this.contentType = contentType;
+	}
+
+
+	public String getUrlFoto() {
+		return urlFoto;
+	}
+
+	public void setUrlFoto(String urlFoto) {
+		this.urlFoto = urlFoto;
+	}
+	
+	
+	public String getUrlThumbnailFoto() {
+		return urlThumbnailFoto;
+	}
+
+	public void setUrlThumbnailFoto(String urlThumbnailFoto) {
+		this.urlThumbnailFoto = urlThumbnailFoto;
 	}
 
 	@Override

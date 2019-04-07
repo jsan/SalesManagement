@@ -68,6 +68,8 @@ public class CadastroVendaService {
 		isSalvarEmitir = true;
 		
 		salvar(venda);
+		
+		// 26.7 aula eventlistener para emitir depois de salvar e nao ao contrario
 	}
 
 	// SecutityConfig.java: @EnableGlobalMethodSecurity(prePostEnabled = true)
