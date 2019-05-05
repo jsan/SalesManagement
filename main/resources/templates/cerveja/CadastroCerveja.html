@@ -17,14 +17,15 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-10">
-					<h1 th:if="${cerveja.nova}">Cadastro de cervejas</h1>
+					<h1 th:if="${cerveja.nova}" th:text="#{venda.novo.produto.titulo}">Cadastro de cervejas</h1>
 					<h1 th:unless="${cerveja.nova}" th:text="|Edição da ${cerveja.nome}|">Edição de cervejas</h1>
 				</div>
 				
 				<div class="col-sm-2">
 					<div class="aw-page-header-controls">
 						<a class="btn  btn-default" th:href="@{/cervejas}">
-							<i class="glyphicon  glyphicon-plus-sign"></i> <span class="hidden-xs  hidden-sm">Pesquisa</span>
+							<i class="glyphicon  glyphicon-plus-sign"></i> 
+							<span class="hidden-xs  hidden-sm" th:text="#{venda.pesquisa.produto.titulo}">Pesquisa</span>
 						</a>
 					</div>
 				</div>

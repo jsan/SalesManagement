@@ -16,13 +16,14 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-10">
-					<h1>Pesquisa de cervejas</h1>
+					<h1 th:text="#{venda.pesquisa.produto.titulo}">Pesquisa de cervejas</h1>
 				</div>
 				
 				<div class="col-xs-2">
 					<div class="aw-page-header-controls">
 						<a class="btn  btn-default" th:href="@{/cervejas/nova}">
-							<i class="glyphicon  glyphicon-plus-sign"></i> <span class="hidden-xs  hidden-sm">Nova cerveja</span>
+							<i class="glyphicon  glyphicon-plus-sign"></i> 
+							<span class="hidden-xs  hidden-sm" th:text="#{venda.novo.produto.titulo}">Nova cerveja</span>
 						</a>
 					</div>
 				</div>

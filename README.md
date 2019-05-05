@@ -2,23 +2,30 @@
 Manage your products, your clients, your sellers and your sales. 
 
 
-As an administrator user you can catalog your products to your stock, catalog buyers clients into a database, and seller users.
+As administrator user, you can catalog products to your stock, catalog clients and sellers users. 
 
-As a user you can fill up a product order, include a list of products to be in it, upload pictures, give discounts, make notes and send it by e-mail. The status of an order can be changed from budget to issued or canceled.
+A seller user, if active, can make sale orders registration to clients from the database.
+ 
+A sale order has in it, the buyer client, 
+product or a list of products, quantity per product with total price, 
+an order discount, freight fee, delivery address, delivery date...).
+A sales order can be saved, issued, send to the client email as an order invoice, or it can be canceled.
 
-On the dash-board, information gets up to date accordingly with the sales. Graphic monthly chart of the  sales, items in stock and total of clients cataloged. 
+The dash-board page has information about your sales, such as 
+how many items you have in stock remaining, clients registered, average amount of sales. 
+sales tracked by a sales chart...
+
+Login as administrator:
+admin@brewer.com
+pass: admin
+
+on the left menu choose products and the click new product on the right to include a product
+on the left menu choose clients to include a a buyer
+on the left menu choose users to include a seller (or you can use your admin user to register a sale too)
+on the left menu choose register a order to make a sale.
+see the status of your sales on the dash-board.
 
 Some Technical specification:
 Java 1.8.201 / Spring MVC / Spring Security / Thymeleaf server pages /
 JPA / Hibernate / MySql / JPQL / Hibernate criteria / 
-
-TODO: 
-Dashboard: valor total do estoque (retirar do estoque a cada venda emitida) Itens no estoque (retirar do estoque a cada venda emitida, e restringir se o produto estiver esgotado) total de clientes grafico venda por origem - feito
-
-Fazer a operação acima com eventListener (emitir depius de salvar)
-
-Terminar a internacionalizacao
-
-P4
-ublicar em uma nuvem
-
+Production Server Heroku: Deploy Tomcat-based Java Web Applications with Webapp Runner
