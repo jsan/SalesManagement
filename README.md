@@ -19,11 +19,18 @@ Login as administrator:
 admin@brewer.com
 pass: admin
 
-on the left menu choose products and the click new product on the right to include a product
-on the left menu choose clients to include a a buyer
-on the left menu choose users to include a seller (or you can use your admin user to register a sale too)
-on the left menu choose register a order to make a sale.
-see the status of your sales on the dash-board.
+Step by step first Sale.
+ 
+- on the left menu choose products and the click new product on the right to include a product
+
+- on the left menu choose clients to include a a buyer
+
+- on the left menu choose users to include a seller (or you can use your admin user to register a sale too)
+
+- on the left menu choose register a order to make a sale.
+
+- see the status of your sales on the dash-board.
+
 
 Some Technical specification:
 Java 1.8.201 / Spring MVC / Spring Security / Thymeleaf server pages /
