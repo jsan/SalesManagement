@@ -15,7 +15,8 @@ The dash-board page has information about your sales, such as
 how many items you have in stock remaining, clients registered, average amount of sales. 
 sales tracked by a sales chart...
 
-Login as administrator:
+Login as administrator to:
+http://jmbrewer.herokuapp.com/
 admin@brewer.com
 pass: admin
 
