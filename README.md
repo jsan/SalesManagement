@@ -38,3 +38,36 @@ Some Technical specification:
 Java 1.8.201 / Spring MVC / Spring Security / Thymeleaf server pages /
 JPA / Hibernate / MySql / JPQL / Hibernate criteria / 
 Production Server Heroku: Deploy Tomcat-based Java Web Applications with Webapp Runner
+
+Portuguese
+----------
+Aplicativo de gerenciamento de vendas
+Gerencie seus produtos, seus clientes, seus vendedores e suas vendas.
+
+Como usuário administrador, você pode catalogar produtos para seu estoque, catalogar clientes e usuários vendedores.
+
+Um usuário vendedor, se ativo, pode fazer o registro de pedidos de venda para clientes a partir do banco de dados.
+
+Uma ordem de venda contém, como cliente comprador, produto ou lista de produtos, quantidade por produto com preço total, desconto na encomenda, taxa de frete, endereço de entrega, data de entrega ...). Um pedido de venda pode ser salvo, emitido, enviado ao e-mail do cliente como uma fatura de pedido ou pode ser cancelado.
+
+A página do painel contém informações sobre suas vendas, como quantos itens você tem em estoque, clientes cadastrados, quantidade média de vendas. vendas rastreadas por um gráfico de vendas ...
+
+Faça login como administrador em: http://jmbrewer.herokuapp.com/
+
+usuário: admin@brewer.com
+
+passar: admin
+
+Passo a passo primeira venda.
+
+no menu esquerdo escolha produtos e clique em novo produto à direita para incluir um produto
+
+no menu à esquerda, escolha clientes para incluir um comprador
+
+no menu esquerdo, escolha usuários para incluir um vendedor (ou você pode usar seu usuário administrador para registrar uma venda)
+
+no menu à esquerda, selecione registrar um pedido para fazer uma venda.
+
+veja o status de suas vendas no painel.
+
+Algumas especificações técnicas: Java 1.8.201 / Spring MVC / Spring Security / páginas do servidor Thymeleaf / JPA / Hibernate / MySql / JPQL / critérios do Hibernate / Production Server Heroku: implantar aplicativos da Web Java baseados em Tomcat com Webapp Runner
